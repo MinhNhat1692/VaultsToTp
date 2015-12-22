@@ -29,9 +29,7 @@ VaultToTp.prototype.GetCode = function() {
 
 VaultToTp.prototype.GetTimeLeft = function() {
 	var time = Math.floor(Date.now() / 1000);
-	console.log(time);
-	console.log(Math.floor(time / 30), 4);
-	return code;
+	return 30 - Math.floor((time/30 - Math.floor(time / 30)) * 30);
 };
 
 function bufferizeSecret(secret) {
